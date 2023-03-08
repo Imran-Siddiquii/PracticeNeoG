@@ -170,3 +170,15 @@ const sumOfAges = (array2) => {
 };
 
 console.log(sumOfAges(array2)); // 121
+
+const strings = ["apple", "banana", "cherry"];
+
+const checkAlphabet = strings
+  .map((elements) => elements.split(""))
+  .reduce((acc, curr) => {
+    curr.forEach((char) => (acc[char] = (acc[char] || 0) + 1));
+    console.log(acc);
+    return acc;
+  }, {});
+
+console.log("checkAplha", checkAlphabet);
